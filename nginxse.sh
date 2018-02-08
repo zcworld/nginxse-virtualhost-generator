@@ -100,7 +100,7 @@ read -p "Use PHP-FPM? (Y/N):  " phpfpmsupport
 
 phpfpmblock="location ~ \.php$ {\n
 include /etc/nginx/fastcgi_params;\n
-fastcgi_pass unix:/var/run/php5-fpm.sock;\n
+fastcgi_pass unix:/run/php/php7.0-fpm.sock;\n
 fastcgi_index index.php;\n
 fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;\n
 }\n"
